@@ -15,6 +15,7 @@ const systems = [
     color: 'blue',
     icon: 'communication',
     href: 'https://ocdra-commtracksys.vercel.app',
+    capabilities: ['Live tracking', 'Action monitoring', 'Secure records'],
   },
   {
     number: '02',
@@ -25,6 +26,7 @@ const systems = [
     color: 'amber',
     icon: 'correspondence',
     href: 'https://drm-system.vercel.app',
+    capabilities: ['Document creation', 'Records workflow', 'Release tracking'],
   },
 ]
 
@@ -38,7 +40,7 @@ function App() {
           <div className="section-heading">
             <p className="eyebrow">Digital services</p>
             <h2 id="systems-title">Choose your workspace</h2>
-            <p>Access CHED’s official communication and correspondence platforms in one place.</p>
+            <p>Access CHED’s official communication and correspondence platforms in one secure place.</p>
           </div>
           <div className="system-grid">
             {systems.map((system) => <SystemCard key={system.number} {...system} />)}

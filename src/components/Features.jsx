@@ -16,7 +16,8 @@ function Features() {
       <div className="section-wrap feature-inner">
         <div className="feature-intro">
           <p className="eyebrow">Official digital services</p>
-          <h2>One less thing<br />to think about.</h2>
+          <h2>Built for focused, accountable work.</h2>
+          <p className="feature-lead">A unified entry point designed around the way official records move—from first receipt to final release.</p>
         </div>
         <div className="feature-list">
           {features.map(([icon, title, text], index) => (

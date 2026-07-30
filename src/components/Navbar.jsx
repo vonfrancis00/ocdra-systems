@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+
 const Brand = () => (
   <a className="brand" href="#" aria-label="CHED Systems home">
     <img className="brand-seal" src="/ched.png" alt="Commission on Higher Education" />
@@ -6,14 +8,27 @@ const Brand = () => (
 )
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 16)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
   return (
-    <header className="navbar">
+    <header className={`navbar${scrolled ? ' is-scrolled' : ''}`}>
       <div className="nav-inner">
         <Brand />
-        <nav aria-label="Main navigation">
-          <a href="#systems">Systems</a>
-          <a href="#features">Why this portal</a>
-          <a href="#support">Support</a>
+        <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="main-navigation" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'} onClick={() => setMenuOpen((open) => !open)}>
+          <span /><span />
+        </button>
+        <nav id="main-navigation" className={menuOpen ? 'is-open' : ''} aria-label="Main navigation">
+          <a href="#systems" onClick={() => setMenuOpen(false)}>Systems</a>
+          <a href="#features" onClick={() => setMenuOpen(false)}>Why this portal</a>
+          <a href="#support" onClick={() => setMenuOpen(false)}>Support</a>
         </nav>
         <a className="nav-cta" href="#systems">
           Open a system <span aria-hidden="true">↗</span>
