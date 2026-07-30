@@ -3,7 +3,7 @@ function Footer() {
     <footer id="support">
       <div className="section-wrap footer-inner">
         <div>
-          <a className="brand brand-light" href="#" aria-label="Back to top">
+          <a className="brand brand-light" href="#top" aria-label="Back to top">
             <img className="brand-seal" src="/ched.png" alt="Commission on Higher Education" />
             <span>OCDRA <span className="brand-muted">OFFICE SYSTEMS</span></span>
           </a>
@@ -12,7 +12,7 @@ function Footer() {
         <div className="footer-links">
           <a href="#systems">Systems</a><a href="#features">About</a><a href="mailto:ocdra@ched.gov.ph">Contact support</a>
         </div>
-        <p className="copyright">© 2026 Commission on Higher Education. All rights reserved. <a href="#" aria-label="Back to top">Back to top ↑</a></p>
+        <p className="copyright">© 2026 Commission on Higher Education. All rights reserved. <a href="#top" aria-label="Back to top">Back to top ↑</a></p>
       </div>
     </footer>
   )

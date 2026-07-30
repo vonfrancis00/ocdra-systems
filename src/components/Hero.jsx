@@ -1,6 +1,6 @@
 function Hero() {
   return (
-    <section className="hero-section">
+    <section className="hero-section" id="top">
       <div className="hero-glow hero-glow-one" />
       <div className="hero-glow hero-glow-two" />
       <div className="hero-content section-wrap">
@@ -8,7 +8,7 @@ function Hero() {
           <p className="hero-label"><span /> Office of Commissioner Desiderio R. Apag III</p>
           <h1>Official records.<br /><em>Clearly connected.</em></h1>
           <p className="hero-lead">
-            Access CommTrack and CorresFlow—the Commission’s secure platforms for monitoring communications and managing correspondence.
+            Access CommTrack and CorresFlow—the Commission’s platforms for monitoring communications and managing correspondence.
           </p>
           <div className="hero-actions">
             <a href="#systems" className="button button-primary">Explore systems <span>↓</span></a>

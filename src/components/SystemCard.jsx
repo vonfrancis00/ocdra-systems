@@ -8,7 +8,7 @@ function SystemIcon({ type }) {
 function SystemCard({ number, eyebrow, title, description, color, icon, href, capabilities }) {
   return (
     <article className={`system-card ${color}`}>
-      <div className="card-topline"><span>{number}</span><span className="status"><i /> Online</span></div>
+      <div className="card-topline"><span>{number}</span><span className="status"><i /> Official access</span></div>
       <div className="system-icon"><SystemIcon type={icon} /></div>
       <p className="card-eyebrow">{eyebrow}</p>
       <h3>{title}</h3>
@@ -16,7 +16,7 @@ function SystemCard({ number, eyebrow, title, description, color, icon, href, ca
       <ul className="capability-list" aria-label={`${title} capabilities`}>
         {capabilities.map((capability) => <li key={capability}>{capability}</li>)}
       </ul>
-      <a href={href} className="card-link">
+      <a href={href} className="card-link" target="_blank" rel="external noopener noreferrer" referrerPolicy="no-referrer">
         Access system <span aria-hidden="true">→</span>
       </a>
       <div className="card-watermark" aria-hidden="true">{number}</div>

@@ -1,18 +1,29 @@
-# React + Vite
+# OCDRA Systems Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A static React portal for the Office of Commissioner Desiderio R. Apag III. It links staff to CommTrack and CorresFlow.
 
-Currently, two official plugins are available:
+## Local development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```sh
+npm ci
+npm run dev
+```
 
-## React Compiler
+Run the full production check before deployment:
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+```sh
+npm run check
+```
 
-Note: This will impact Vite dev & build performances.
+## Deployment
 
-## Expanding the ESLint configuration
+The project is configured for Vercel through `vercel.json`. Deploy from the repository root over HTTPS. The configuration includes a restrictive Content Security Policy, clickjacking protection, HSTS, privacy-focused referrer behavior, browser permissions restrictions, and immutable caching for fingerprinted assets.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+If another host is used, reproduce the headers from `vercel.json` at its CDN or reverse proxy. HTML meta tags alone cannot enforce all of these controls.
+
+## Security notes
+
+- Never put credentials or secrets in this client-only repository.
+- External system links open in an isolated browser context and do not send a referrer.
+- Third-party runtime assets are intentionally avoided so the CSP can remain restrictive.
+- Report security concerns using `/.well-known/security.txt`.

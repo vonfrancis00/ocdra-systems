@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 const Brand = () => (
-  <a className="brand" href="#" aria-label="CHED Systems home">
+  <a className="brand" href="#top" aria-label="CHED Systems home">
     <img className="brand-seal" src="/ched.png" alt="Commission on Higher Education" />
     <span>OCDRA <span className="brand-muted"> OFFICE SYSTEMS</span></span>
   </a>
