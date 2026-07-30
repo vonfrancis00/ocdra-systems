@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
+import { scrollToSection } from '../utils/scrollToSection'
 
 const Brand = () => (
-  <a className="brand" href="#top" aria-label="CHED Systems home">
+  <a className="brand" href="#top" aria-label="CHED Systems home" onClick={(event) => scrollToSection(event, 'top')}>
     <img className="brand-seal" src="/ched.png" alt="Commission on Higher Education" />
     <span>OCDRA <span className="brand-muted"> OFFICE SYSTEMS</span></span>
   </a>
@@ -26,9 +27,9 @@ function Navbar() {
           <span /><span />
         </button>
         <nav id="main-navigation" className={menuOpen ? 'is-open' : ''} aria-label="Main navigation">
-          <a href="#systems" onClick={() => setMenuOpen(false)}>Systems</a>
-          <a href="#features" onClick={() => setMenuOpen(false)}>Why this portal</a>
-          <a href="#support" onClick={() => setMenuOpen(false)}>Support</a>
+          <a href="#systems" onClick={(event) => { scrollToSection(event, 'systems'); setMenuOpen(false) }}>Systems</a>
+          <a href="#features" onClick={(event) => { scrollToSection(event, 'features'); setMenuOpen(false) }}>Why this portal</a>
+          <a href="#support" onClick={(event) => { scrollToSection(event, 'support'); setMenuOpen(false) }}>Support</a>
         </nav>
         <span className="nav-cta nav-cta-spacer" aria-hidden="true">
           Open a system <span aria-hidden="true">↗</span>

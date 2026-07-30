@@ -1,3 +1,5 @@
+import { scrollToSection } from '../utils/scrollToSection'
+
 function Hero() {
   return (
     <section className="hero-section" id="top">
@@ -11,8 +13,8 @@ function Hero() {
             Access CommTrack and CorresFlow—the Commission’s platforms for monitoring communications and managing correspondence.
           </p>
           <div className="hero-actions">
-            <a href="#systems" className="button button-primary">Explore systems <span>↓</span></a>
-            <a href="#features" className="text-link">Learn more <span>↗</span></a>
+            <a href="#systems" className="button button-primary" onClick={(event) => scrollToSection(event, 'systems')}>Explore systems <span>↓</span></a>
+            <a href="#features" className="text-link" onClick={(event) => scrollToSection(event, 'features')}>Learn more <span>↗</span></a>
           </div>
           <div className="trust-row">
             <div><strong>24/7</strong><span>Secure access</span></div>
