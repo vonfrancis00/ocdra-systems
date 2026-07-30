@@ -5,7 +5,7 @@ function Footer() {
         <div>
           <a className="brand brand-light" href="#" aria-label="Back to top">
             <img className="brand-seal" src="/ched.png" alt="Commission on Higher Education" />
-            <span>OCDRA <span className="brand-muted">SYSTEMS</span></span>
+            <span>OCDRA <span className="brand-muted">OFFICE SYSTEMS</span></span>
           </a>
           <p>Official digital services of the Office of Commissioner Desiderio R. Apag III.</p>
         </div>

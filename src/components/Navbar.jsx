@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 const Brand = () => (
   <a className="brand" href="#" aria-label="CHED Systems home">
     <img className="brand-seal" src="/ched.png" alt="Commission on Higher Education" />
-    <span>OCDRA <span className="brand-muted">SYSTEMS</span></span>
+    <span>OCDRA <span className="brand-muted"> OFFICE SYSTEMS</span></span>
   </a>
 )
 
@@ -30,9 +30,9 @@ function Navbar() {
           <a href="#features" onClick={() => setMenuOpen(false)}>Why this portal</a>
           <a href="#support" onClick={() => setMenuOpen(false)}>Support</a>
         </nav>
-        <a className="nav-cta" href="#systems">
+        <span className="nav-cta nav-cta-spacer" aria-hidden="true">
           Open a system <span aria-hidden="true">↗</span>
-        </a>
+        </span>
       </div>
     </header>
   )
