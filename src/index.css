@@ -1,0 +1,3 @@
+html, body, #root { min-height: 100%; }
+button, a { -webkit-tap-highlight-color: transparent; }
+::selection { background: #dce6ff; color: #172238; }
