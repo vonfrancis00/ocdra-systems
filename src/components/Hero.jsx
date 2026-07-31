@@ -22,20 +22,28 @@ function Hero() {
             <div><strong>1</strong><span>Access point</span></div>
           </div>
         </div>
-        <div className="hero-art" aria-hidden="true">
-          <div className="orbit orbit-outer" />
-          <div className="orbit orbit-inner" />
-          <div className="art-card art-card-one">
-            <span className="mini-icon">↗</span>
+        <div className="hero-art">
+          <div className="orbit orbit-outer" aria-hidden="true" />
+          <div className="orbit orbit-inner" aria-hidden="true" />
+          <a
+            className="art-card art-card-one"
+            href="https://ocdra-commtracksys.vercel.app"
+            aria-label="Open CommTrack"
+          >
+            <span className="mini-icon" aria-hidden="true">↗</span>
             <div><b>Communication transmitted</b><small>Tracked in CommTrack</small></div>
-          </div>
-          <div className="art-card art-card-two">
-            <span className="avatar">✓</span>
+          </a>
+          <a
+            className="art-card art-card-two"
+            href="https://drm-system.vercel.app"
+            aria-label="Open CorresFlow"
+          >
+            <span className="avatar" aria-hidden="true">✓</span>
             <div><b>Correspondence released</b><small>Updated in CorresFlow</small></div>
-          </div>
-          <div className="center-orb"><img src="/ched.png" alt="" /></div>
-          <span className="spark spark-one">✦</span>
-          <span className="spark spark-two">✦</span>
+          </a>
+          <div className="center-orb" aria-hidden="true"><img src="/ched.png" alt="" /></div>
+          <span className="spark spark-one" aria-hidden="true">✦</span>
+          <span className="spark spark-two" aria-hidden="true">✦</span>
         </div>
       </div>
     </section>
