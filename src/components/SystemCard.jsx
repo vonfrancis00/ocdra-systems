@@ -16,7 +16,7 @@ function SystemCard({ number, eyebrow, title, description, color, icon, href, ca
       <ul className="capability-list" aria-label={`${title} capabilities`}>
         {capabilities.map((capability) => <li key={capability}>{capability}</li>)}
       </ul>
-      <a href={href} className="card-link" target="_blank" rel="external noopener noreferrer" referrerPolicy="no-referrer">
+      <a href={href} className="card-link" rel="external" referrerPolicy="no-referrer">
         Access system <span aria-hidden="true">→</span>
       </a>
       <div className="card-watermark" aria-hidden="true">{number}</div>
